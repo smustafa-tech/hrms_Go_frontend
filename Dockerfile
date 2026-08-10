@@ -52,17 +52,11 @@ RUN npm run build
 # Static files serve करने के लिए perfect
 FROM nginx:alpine
 
-# हमारी custom nginx config copy करो
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Stage 1 से सिर्फ dist/ folder copy करो
 COPY --from=builder /app/dist /usr/share/nginx/html
-
-# nginx.conf में PORT variable replace करने के लिए script
-# Railway $PORT देता है → nginx उसी पर listen करेगा
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["/docker-entrypoint.sh"]
