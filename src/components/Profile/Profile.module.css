@@ -1,0 +1,139 @@
+/* PAGE WRAPPER */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* PROFILE CARD — Center Content */
+.profileCard {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* PROFILE PHOTO */
+.avatarWrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.avatar, .avatarFallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatarFallback {
+  background: #4b7bec;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* TEXT CENTERED BELOW PHOTO */
+.profileDetails {
+  text-align: center;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.department {
+  font-size: 1rem;
+  color: #4b7bec;
+  font-weight: 600;
+}
+
+/* STATUS BADGE */
+.status {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.active {
+  background: #d7f8e4;
+  color: #0a8f43;
+}
+.inactive {
+  background: #fff3d6;
+  color: #c69200;
+}
+.terminated {
+  background: #ffd6d6;
+  color: #d7263d;
+}
+
+/* GRID FOR INFORMATION CARDS */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.4rem;
+}
+
+/* INFO CARD */
+.infoCard {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* REDUCED GAP BETWEEN LABEL & VALUE */
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.infoRow span {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.infoRow p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .infoRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}

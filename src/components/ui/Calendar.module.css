@@ -1,0 +1,121 @@
+.calendarContainer {
+  padding: 20px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #e5e7eb;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.monthTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.navButton {
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #4f46e5;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.navButton:hover {
+  background-color: #eef2ff;
+}
+
+/* Days Header */
+.daysHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Dates Grid */
+.dateGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.dayCell {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.dayCell:hover {
+  background-color: #f3f4f6;
+}
+
+.inactiveMonth {
+  color: #9ca3af;
+  cursor: default;
+}
+
+.today {
+  background-color: #f0fdf4;
+  border: 2px solid #10b981;
+  color: #10b981;
+  font-weight: 700;
+}
+
+.selected {
+  background-color: #4f46e5;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.4);
+  border: none;
+}
+
+.weekend {
+  color: #ef4444;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.selectedDateText {
+  font-size: 14px;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.hintText {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}

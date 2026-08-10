@@ -1,0 +1,30 @@
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
+  gap: var(--spacing-xl);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: var(--spacing-md); */
+}
+
+.cardTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-color-light);
+}
+
+.cardIcon {
+  color: var(--text-color-light);
+  width: 20px;
+  height: 20px;
+}
+
+.cardValue {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+}

@@ -1,0 +1,46 @@
+/* Root container */
+.group {
+  display: grid;
+  gap: 0.5rem; /* spacing between radio items */
+}
+
+/* Radio item */
+.item {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Focus / accessibility styles */
+.item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+/* Disabled state */
+.item:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Indicator wrapper */
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Filled circle when selected */
+.icon {
+  width: 0.625rem; /* 2.5 units */
+  height: 0.625rem;
+  color: currentColor;
+  fill: currentColor;
+}

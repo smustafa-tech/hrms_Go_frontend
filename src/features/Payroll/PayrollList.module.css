@@ -1,0 +1,415 @@
+.baseCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.subTitle {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.searchInputWrapper {
+  position: relative;
+  background: #fffbeb;
+  border-radius: 8px;
+  border: 2px solid #fbbf24;
+  box-shadow: 0 2px 4px rgba(251, 191, 36, 0.1);
+  transition: all 0.2s ease;
+  height: 40px;
+  width: 250px;
+  margin-top: -14px;
+}
+
+.searchInputWrapper:hover {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  box-shadow: 0 4px 8px rgba(251, 191, 36, 0.2);
+}
+
+.searchIcon {
+  color: #f59e0b;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.875rem;
+  color: #374151;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px 0 36px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.statusFilter {
+  border: 2px solid #fbbf24;
+  background: #fffbeb;
+  outline: none;
+  font-size: 0.875rem;
+  color: #374151;
+  width: 140px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  background: white;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+}
+
+.statusFilter:focus {
+  background: white;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+}
+
+.statusFilter:hover {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+.statusFilter option {
+  background: white;
+  color: #374151;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border: none;
+}
+
+.statusFilter option:hover {
+  background: #fbbf24;
+  color: var(--color-text);
+}
+
+.statusFilter option:checked {
+  background: #f59e0b;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.allPayrollsTableWrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.allPayrollsTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.allPayrollsHeader {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+.allPayrollsHeaderCell {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.allPayrollsBody {
+  background: white;
+}
+
+.allPayrollsRow {
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.allPayrollsRow:hover {
+  background: #f8fafc;
+  transform: translateX(2px);
+}
+
+.allPayrollsCell {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.875rem;
+  vertical-align: middle;
+}
+
+.employeeId {
+  font-weight: 600;
+  color: #1f2937;
+  background: #eff6ff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.employeeName {
+  font-weight: 500;
+  color: #374151;
+}
+
+.viewButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewButton:hover {
+  background: var(--color-primary-hover, #1d4ed8);
+  transform: translateY(-1px);
+}
+
+.allPayrollsEmptyCell {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #64748b;
+  font-style: italic;
+  font-weight: 500;
+  background: #f8fafc;
+}
+
+.modalContent {
+  max-width: 900px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modalHeader {
+  padding: 1.5rem 2rem 1rem;
+  border-bottom: 2px solid #fbbf24;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #92400e;
+  margin: 0;
+}
+
+.modalBody {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoSection {
+  background: #f8fafc;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #fbbf24;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.payrollGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.infoLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.infoValue {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.salaryValue {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.deductionValue {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #dc2626;
+  background: #fef2f2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.netSalaryValue {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #059669;
+  background: #d1fae5;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 2px solid #10b981;
+  width: fit-content;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.statusBadge.paid {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.statusBadge.approved {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #3b82f6;
+}
+
+.statusBadge.processed {
+  background: #e9d5ff;
+  color: #7c2d12;
+  border: 1px solid #a855f7;
+}
+
+.statusBadge.generated {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+
+.actionSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.actionButton {
+  background: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background: var(--color-primary-hover, #1d4ed8);
+  transform: translateY(-1px);
+}
+
+.downloadButton {
+  background: #6b7280;
+  color: var(--color-text);
+  border: 1px solid #9ca3af;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.downloadButton:hover {
+  background: #4b5563;
+  transform: translateY(-1px);
+}
+
+.editButton {
+  background: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editButton:hover {
+  background: var(--color-primary-hover, #1d4ed8);
+  transform: translateY(-1px);
+}

@@ -1,0 +1,114 @@
+.profileModalContent {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  width: 100%;
+  max-width: 600px; /* Fixed width for profile modal */
+  margin: 0 auto; /* Center modal */
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  color: #6b7280;
+}
+
+.modalDescription {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px; /* Increased gap */
+}
+
+@media (min-width: 600px) { /* Adjust breakpoint for two columns */
+  .profileGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Spacing between items in a section */
+}
+
+.profileHeading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 8px;
+}
+
+.profileItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #374151; /* Default text color */
+}
+
+.profileItem span {
+  /* No specific styles needed, inheriting from parent */
+}
+
+.profileIcon {
+  color: #6b7280; /* Muted icon color */
+  flex-shrink: 0;
+}
+
+/* Reusing badge styles for status in profile */
+.badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+.activeBadge {
+  background-color: #d1fae5; /* Light green */
+  color: #059669; /* Dark green */
+}
+
+.onLeaveBadge {
+  background-color: #fef3c7; /* Light yellow */
+  color: #d97706; /* Dark yellow */
+}
+
+.inactiveBadge {
+  background-color: #fee2e2; /* Light red */
+  color: #ef4444; /* Dark red */
+}

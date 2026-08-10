@@ -1,0 +1,58 @@
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.carouselViewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselContainer {
+  display: flex;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.carouselItem {
+  flex: 0 0 auto;
+}
+
+.itemHorizontal {
+  margin-left: var(--spacing-lg); /* 16px */
+}
+
+.itemVertical {
+  margin-top: var(--spacing-lg); /* 16px */
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full); /* fully rounded */
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.carouselButton:hover:not(:disabled) {
+  background-color: var(--color-background-light);
+}
+
+.carouselButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

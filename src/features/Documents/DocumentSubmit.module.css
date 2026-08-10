@@ -1,0 +1,306 @@
+/* --- Using your variables --- */
+:root {
+  --color-primary: #f5b700;
+  --color-secondary: #f1f5f9;
+  --color-accent: #0ea5e9;
+  --color-background: #ffffff;
+  --color-border: #e2e8f0;
+  --color-card: #ffffff;
+  --color-text: #5c3a1e;
+  --color-text-light: #b69f8c;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+}
+
+.container {
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: var(--spacing-lg) auto;
+  background-color: var(--color-background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.title {
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* --- Upload Grid --- */
+.uploadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.documentCard {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.documentCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.cardTitle {
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.mandatory {
+  color: var(--color-error);
+  margin-left: 4px;
+}
+
+/* --- File Input Area --- */
+.uploadArea {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploadLabel {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.uploadLabel:hover {
+  opacity: 0.9;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadHint {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+/* --- Staged File Info --- */
+.fileInfo {
+  background-color: var(--color-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fileName {
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileSize {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.fileActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.viewButton {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.removeButton {
+  background-color: var(--color-error);
+  color: white;
+}
+
+/* --- Submission & Uploaded List --- */
+.submissionSection {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+}
+
+.submitButton {
+  background-color: var(--color-success);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.submitButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: var(--color-error);
+  margin-bottom: var(--spacing-md);
+}
+
+.uploadedSection {
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+}
+
+.documentList {
+    list-style: none;
+    padding: 0;
+}
+
+.documentItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.5rem;
+}
+
+.downloadLink {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* --- Modal --- */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: var(--color-background);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.modalIcon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.successModal .modalIcon { color: var(--color-success); }
+.errorModal .modalIcon { color: var(--color-error); }
+
+.modalTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.modalButton {
+  margin-top: var(--spacing-lg);
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formatNote {
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.sizeNote {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.uploadArea {
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: border-color 0.2s ease;
+}
+
+.uploadArea:hover {
+  border-color: #007bff;
+  cursor: pointer;
+}
+
+.uploadLabel {
+  display: inline-block;
+  color: #5c3a1e;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.uploadHint {
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}

@@ -1,0 +1,44 @@
+.scroll-area-root {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-area-viewport {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: auto;
+}
+
+.scroll-bar {
+  display: flex;
+  user-select: none;
+  touch-action: none;
+  transition: background-color 0.2s ease;
+}
+
+.scroll-bar.vertical {
+  height: 100%;
+  width: 10px;
+  border-left: 1px solid transparent;
+  padding: 1px;
+}
+
+.scroll-bar.horizontal {
+  height: 10px;
+  flex-direction: column;
+  border-top: 1px solid transparent;
+  padding: 1px;
+}
+
+.scroll-thumb {
+  flex: 1;
+  background-color: var(--border-color, #d1d5db);
+  border-radius: 9999px;
+}
+
+.scroll-area-corner {
+  background: transparent;
+}

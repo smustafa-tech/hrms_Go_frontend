@@ -1,0 +1,205 @@
+.formContent {
+  padding: 8px 0;
+}
+
+.employeeRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.employeeLabel {
+  font-weight: 600;
+  color: #374151;
+  font-size: 13px;
+}
+
+.employeeSelect {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #fbbf24;
+  border-radius: 6px;
+  background-color: white;
+  color: #1f2937;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.employeeSelect:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.1);
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldLabel {
+  font-weight: 600;
+  color: #374151;
+  font-size: 12px;
+}
+
+.fieldInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: white;
+  color: #1f2937;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.fieldInput:focus {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.1);
+}
+
+.fieldInput::placeholder {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.required::after {
+  content: " *";
+  color: #ef4444;
+}
+
+.sectionHeader {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 14px;
+  margin: 16px 0 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #fbbf24;
+}
+
+.threeFieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.attendanceInfo {
+  background-color: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.attendanceHeader {
+  font-size: 13px;
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 8px;
+}
+
+.attendanceRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.attendanceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attendanceLabel {
+  font-size: 12px;
+  color: #78350f;
+  font-weight: 500;
+}
+
+.attendanceValue {
+  font-size: 12px;
+  font-weight: 600;
+  color: #dc2626;
+}
+
+.calculationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #fbbf24;
+}
+
+.calculationField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calculationLabel {
+  font-weight: 600;
+  color: #374151;
+  font-size: 11px;
+}
+
+.calculationValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: #059669;
+  padding: 4px 8px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #d1fae5;
+}
+
+.deductionValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: #dc2626;
+  padding: 4px 8px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #fecaca;
+}
+
+.netValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  padding: 6px 10px;
+  background-color: #fbbf24;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #f59e0b;
+}
+
+@media (max-width: 640px) {
+  .fieldRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .threeFieldRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .calculationRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

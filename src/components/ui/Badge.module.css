@@ -1,0 +1,65 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px; /* full rounded */
+  border: 1px solid transparent;
+  padding: 0.125rem 0.625rem; /* py-0.5 px-2.5 */
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 600; /* font-semibold */
+  transition: background-color 0.2s ease;
+  cursor: default;
+}
+
+.badge:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary-foreground),
+    0 0 0 4px var(--color-background);
+}
+
+/* Variants */
+.default {
+  background-color: var(--color-primary); /* primary */
+  color: var(--color-primary-foreground); /* primary foreground */
+}
+
+/* .default:hover {
+  background-color: #e6ac00; 
+} */
+
+.secondary {
+  background-color: var(--color-secondary); /* secondary */
+  color: var(--color-secondary-foreground); /* secondary foreground */
+}
+
+/* .secondary:hover {
+  background-color: #dbe4ed; 
+} */
+
+.positive {
+  background-color: var(--color-success); /* destructive */
+  color: var(--color-success-foreground);
+}
+
+/* .positive:hover {
+  background-color: #abd3aa; 
+} */
+
+.destructive {
+  background-color: var(--color-error);
+  color: var(--color-error-foreground);
+}
+
+/* .destructive:hover {
+  background-color: #dc2626; 
+} */
+
+.warning {
+  background-color: var(--color-warning);
+  color: var(--color-warning-foreground);
+}
+
+.outline {
+  border-color: var(--color-border); /* border */
+  color: var(--color-text); /* text */
+  background-color: transparent;
+}

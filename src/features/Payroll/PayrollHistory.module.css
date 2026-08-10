@@ -1,0 +1,470 @@
+.dashboardContainer {
+  padding: 32px;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: Inter, sans-serif;
+}
+
+.baseCard {
+  height: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  background-color: white;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.mainTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.subTitle {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.filterIcon {
+  color: #f5b700;
+  width: 24px;
+  height: 24px;
+}
+
+.filterContainer {
+  background-color: #eef2ff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #c7d2fe;
+  margin-bottom: 24px;
+}
+
+.filterGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: end;
+}
+
+.filterLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filterInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #f5b700;
+  border-radius: 6px;
+  outline: none;
+  background-color: white;
+}
+
+.filterSelect {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #f5b700;
+  border-radius: 6px;
+  outline: none;
+  background-color: white;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f5b700;
+  color: var(--color-text);
+  transition: background-color 0.2s;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+}
+
+.resultsContainer {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.resultsHeader {
+  background-color: #f3f4f6;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.resultsTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.resultsIcon {
+  color: #f5b700;
+  width: 20px;
+  height: 20px;
+}
+
+.employeeName {
+  font-weight: 500;
+  cursor: pointer;
+  color: #4f46e5;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s;
+}
+
+.badgeBase {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Table Styling */
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.historyTableHeader {
+  background: var(--color-primary);
+}
+
+.historyTableHeaderCell {
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text);
+  border-bottom: 2px solid #d97706;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.historyTableBody {
+  background-color: white;
+}
+
+.historyTableRow {
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.historyTableRow:hover {
+  background-color: #fffbeb;
+}
+
+.historyTableRow:nth-child(even) {
+  background-color: #fefce8;
+}
+
+.historyTableCell {
+  padding: 16px 12px;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.historyTableEmptyCell {
+  padding: 32px;
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+  background-color: #f9fafb;
+}
+
+.loadingCell {
+  padding: 32px;
+  text-align: center;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.employeeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.employeeName {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.employeeId {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.periodValue {
+  font-weight: 600;
+  color: #374151;
+  background-color: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.salaryValue {
+  font-weight: 600;
+  color: #059669;
+  font-size: 14px;
+}
+
+.netSalaryValue {
+  font-weight: 700;
+  color: #dc2626;
+  font-size: 15px;
+}
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+.generated {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+.processed {
+  background-color: #fef3c7;
+  color: #d97706;
+  border: 1px solid #fcd34d;
+}
+
+.approved {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.paid {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+.dateValue {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.downloadButton {
+  background: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.downloadButton:hover {
+  background: var(--color-primary-hover, #1d4ed8);
+  transform: translateY(-1px);
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.viewButton {
+  background: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.viewButton:hover {
+  background: var(--color-warning);
+  transform: translateY(-1px);
+}
+
+/* Modal Styles */
+.modalContent {
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.modalDescription {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoSection {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f9fafb;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #f59e0b;
+  padding-bottom: 8px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.payrollGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.infoValue {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.salaryValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #059669;
+}
+
+.deductionValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #dc2626;
+}
+
+.netSalaryValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+@media (max-width: 768px) {
+  .filterGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .infoGrid,
+  .payrollGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboardContainer {
+    padding: 16px;
+  }
+  
+  .historyTable {
+    font-size: 12px;
+  }
+  
+  .historyTableHeaderCell,
+  .historyTableCell {
+    padding: 12px 8px;
+  }
+  
+  .employeeInfo {
+    gap: 2px;
+  }
+  
+  .employeeName {
+    font-size: 13px;
+  }
+  
+  .employeeId {
+    font-size: 11px;
+  }
+}

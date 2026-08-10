@@ -1,0 +1,222 @@
+/* ==============================
+   SETTINGS WRAPPER & HEADERS
+   ============================== */
+.settingsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--foreground);
+  padding: 1rem 0;
+}
+
+.settingsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settingsTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settingsSubtitle {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.iconLarge {
+  width: 2rem;
+  height: 2rem;
+}
+
+.iconSmall {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+/* ==============================
+   TABS
+   ============================== */
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tabsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+
+/* ==============================
+   CARD
+   ============================== */
+.card {
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* ==============================
+   AVATAR SECTION
+   ============================== */
+.avatarSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.avatarActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cameraIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+.avatarNote,
+.avatarHint {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* ==============================
+   FORM GRID & INPUTS
+   ============================== */
+.formGrid,
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* ==============================
+   BUTTONS & ACTIONS
+   ============================== */
+.actions,
+.buttonRight {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.buttonRight button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ==============================
+   PASSWORD FIELDS
+   ============================== */
+.relativeInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.eyeButton {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--muted-foreground);
+}
+
+/* ==============================
+   UTILITIES
+   ============================== */
+.separator {
+  border-top: 1px solid var(--border);
+  margin: 1.25rem 0;
+}
+
+/* ==============================
+  Toggle
+   ============================== */
+.switchRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.toggleButton {
+  width: 50px;
+  height: 24px;
+  border-radius: 999px;
+  background-color: #d1d5db; /* gray */
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleButton:hover {
+  opacity: 0.85;
+}
+
+.toggleOn {
+  background-color: #4f46e5; /* accent color */
+}
+
+.toggleCircle {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.toggleOn .toggleCircle {
+  transform: translateX(26px);
+}
+
+@media (max-width: 640px) {
+  .avatarSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .settingsTitle {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,235 @@
+.sidebar {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  transition: all 0.3s ease;
+
+  position: sticky;
+  top: 0;
+}
+
+.sidebarCollapsed {
+  width: 4rem;
+}
+
+.sidebarExpanded {
+  width: 16rem;
+}
+
+.header {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoIcon {
+  height: 2.5rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.toggleButton {
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.15s ease;
+}
+
+.toggleButton:hover {
+  background-color: var(--color-secondary);
+}
+
+.toggleButtonCollapsed {
+  margin: 0 auto;
+}
+
+.toggleButtonExpanded {
+  margin-left: auto;
+}
+
+.navigation {
+  flex: 1;
+  padding: 1rem 0.75rem;
+  overflow-y: auto;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.navItemActive {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.navItemInactive {
+  color: var(--color-text-light);
+}
+
+.navItemInactive:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.navItemCollapsed {
+  justify-content: center;
+}
+
+.navIcon {
+  height: 1rem;
+  width: 1rem;
+  flex-shrink: 0;
+}
+
+.navIconExpanded {
+  margin-right: 0.75rem;
+}
+
+.navText {
+  flex: 1;
+}
+
+.navBadge {
+  margin-left: auto;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.userInfo {
+  border-top: 1px solid var(--color-border);
+  padding: 1rem;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.userAvatar {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.userDetails {
+  flex: 1;
+  min-width: 0;
+}
+
+.userName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userRole {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  text-transform: capitalize;
+}
+
+.logoutIcon {
+  cursor: pointer;
+  color: var(--color-text);
+  transition: color 0.15s ease;
+}
+.logoutIcon:hover {
+  color: var(--color-text-light);
+}
+
+/* Parent dropdown button should NOT get blue bg */
+.dropdown button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Submenu container */
+.subMenu {
+  margin-left: 1.5rem;
+  padding-left: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-left: 2px solid var(--color-border);
+}
+
+/* Submenu items */
+.subNavItem {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  color: var(--color-text-light);
+}
+
+.subNavItem:hover {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+/* Active submenu item */
+.subNavActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.subNavInactive {
+  color: var(--color-text-light);
+}

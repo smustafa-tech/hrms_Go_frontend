@@ -1,0 +1,77 @@
+/* Accordion Root: spacing between items */
+.accordionRoot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* spacing between items */
+}
+
+/* Accordion Item: border bottom */
+.accordionItem {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-background);
+}
+
+/* Accordion Trigger Wrapper */
+.accordionHeader {
+  display: flex;
+}
+
+/* Trigger Button */
+.accordionTrigger {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.accordionTrigger:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+/* Rotate icon when open */
+.accordionTriggerOpen svg {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+  color: var(--color-primary);
+}
+
+/* Accordion Content */
+.accordionContent {
+  overflow: hidden;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  transition: all 0.2s ease;
+  background-color: var(--color-background-light);
+}
+
+/* Inner Content Padding */
+.accordionContentInner {
+  padding-top: 0;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+/* Optional: Animations (Radix states) */
+@keyframes accordionDown {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordionUp {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.accordionContent[data-state="open"] {
+  animation: accordionDown 0.2s ease-out;
+}
+
+.accordionContent[data-state="closed"] {
+  animation: accordionUp 0.2s ease-out;
+}

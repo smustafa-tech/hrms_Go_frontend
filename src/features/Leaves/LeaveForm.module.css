@@ -1,0 +1,70 @@
+.form {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: 1fr;
+}
+
+.row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 220px;
+  flex: 1;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.input,
+.select,
+.textarea {
+  padding: 0.55rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.textarea {
+  min-height: 90px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.btn {
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background: #0ea5a4;
+  color: white;
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+}
+
+.dateConatiner {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.dateConatiner .field {
+  flex: 1;
+}

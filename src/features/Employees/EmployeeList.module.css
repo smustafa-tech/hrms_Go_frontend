@@ -1,0 +1,203 @@
+.employeeDirectoryCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+
+.directoryTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.directorySubtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.searchContainer {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  width: 18px;
+  height: 18px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 12px 10px 40px; /* Left padding for icon */
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1f2937;
+  background-color: #f9fafb; /* Light input background */
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.employeeTable {
+  width: 100%;
+  border-collapse: separate; /* For rounded corners on cells */
+  border-spacing: 0;
+}
+
+.employeeTable thead th {
+  padding: 12px 16px;
+  background-color: #f9fafb; /* Lighter header background */
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.employeeTable thead th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.employeeTable thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.employeeTable tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+  cursor: pointer; /* Indicates clickable row */
+}
+
+.employeeTable tbody tr:last-child {
+  border-bottom: none;
+}
+
+.employeeTable tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+.employeeTable tbody td {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.employeeInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e0e7ff; /* Light blue for avatar initials */
+  color: #4f46e5; /* Darker blue text for initials */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.nameAndEmail {
+  display: flex;
+  flex-direction: column;
+}
+
+.employeeName {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.employeeEmail {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1; /* Ensure text sits well */
+}
+
+.activeBadge {
+  background-color: #d1fae5; /* Light green */
+  color: #059669; /* Dark green */
+}
+
+.onLeaveBadge {
+  background-color: #fef3c7; /* Light yellow */
+  color: #d97706; /* Dark yellow */
+}
+
+.inactiveBadge {
+  background-color: #fee2e2; /* Light red */
+  color: #ef4444; /* Dark red */
+}
+
+.actionsCell {
+  position: relative;
+  text-align: right; /* Align three dots to the right */
+  width: 80px; /* Give some fixed width to prevent content shift */
+}
+
+.actionsDropdown {
+  position: relative;
+  display: inline-block; /* To contain the dropdown content */
+  z-index: 50; 
+}
+
+.dropdownContent {
+  position: absolute;
+  right: 0;
+  top: 100%; /* Position below the trigger button */
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  z-index: 1000;
+  overflow: hidden; /* For border-radius on children */
+}
+
+.dropdownContent button {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+  border-radius: 0; /* Remove individual button border-radius */
+}
+
+.dropdownContent button:hover {
+  background-color: #ccd0d6;
+}
+
+.noData {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+  font-style: italic;
+}

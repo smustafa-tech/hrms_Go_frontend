@@ -1,0 +1,50 @@
+/* FormItem spacing */
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm); /* space between label, input, message */
+}
+
+/* Label */
+.formLabel {
+  font-weight: 500; /* medium */
+  font-size: var(--font-size-sm); /* small */
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-text); /* default text */
+}
+
+.formLabel.error {
+  color: var(--color-error); /* red for error */
+}
+
+/* Input / Control */
+.formControl {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border); /* border color */
+  border-radius: var(--radius-md); /* rounded-md */
+  font-size: var(--font-size-sm);
+  line-height: 1.25rem;
+  outline: none;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formControl:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(245, 183, 0, 0.3); /* primary focus shadow */
+}
+
+/* Description */
+.formDescription {
+  font-size: var(--font-size-xs); /* text-xs */
+  color: var(--color-text-light); /* muted gray */
+}
+
+/* Error Message */
+.formMessage {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-error); /* red */
+}

@@ -1,0 +1,106 @@
+/* --- Main Modal Container --- */
+.modalContent {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  width: 100%;
+  max-width: 720px;
+  margin: 40px auto;
+  max-height: 90vh;
+  overflow-y: auto; /* ✅ scrolls if content is long */
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+.modalContent::-webkit-scrollbar {
+  width: 3px;
+}
+.modalContent::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+.modalContent::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* --- Header --- */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+
+/* --- Form --- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Responsive Grid Layout --- */
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* --- Labels --- */
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* --- Inputs --- */
+.field input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.field input:focus {
+  outline: none;
+  border-color: #4f46e5; /* Primary Indigo */
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* --- Select Value Wrapper (for proper alignment) --- */
+.valueWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+/* --- Actions (Bottom Buttons) --- */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 24px;
+  background: #fff;
+  position: sticky;
+  bottom: 0; /* ✅ keep buttons visible when scrolling */
+  z-index: 10;
+}

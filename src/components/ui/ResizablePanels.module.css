@@ -1,0 +1,74 @@
+/* Panel Group base */
+.panelGroup {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* If vertical, flex direction is column */
+[data-panel-group-direction="vertical"] {
+  flex-direction: column;
+}
+
+/* Resize handle base */
+.handle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--border);
+  cursor: col-resize;
+  width: 2px; /* default for horizontal panels */
+}
+
+/* Horizontal vs vertical adjustments */
+[data-panel-group-direction="vertical"] .handle {
+  width: 100%;
+  height: 2px;
+  cursor: row-resize;
+}
+
+/* Handle pseudo-line */
+.handle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: inherit;
+  transform: translateX(-50%);
+}
+
+[data-panel-group-direction="vertical"] .handle::after {
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Grip container */
+.handleGrip {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  width: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background-color: var(--border);
+}
+
+/* Grip icon */
+.gripIcon {
+  width: 0.625rem; /* 2.5 units */
+  height: 0.625rem;
+}
+
+/* Focus ring */
+.handle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--ring);
+}

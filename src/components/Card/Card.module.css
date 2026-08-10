@@ -1,0 +1,22 @@
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+.value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.icon {
+  background: var(--color-background);
+  padding: 8px;
+  border-radius: 8px;
+}

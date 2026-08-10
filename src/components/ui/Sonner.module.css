@@ -1,0 +1,60 @@
+.toaster {
+  /* wrapper for all toasts */
+  position: fixed;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  z-index: 10000;
+}
+
+.toast {
+  background-color: var(--color-background); /* updated from var(--background) */
+  color: var(--color-text); /* updated from var(--foreground) */
+  border: 1px solid var(--color-border); /* updated */
+  box-shadow: var(--shadow-md); /* use theme shadow */
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  min-width: 16rem;
+}
+
+.description {
+  color: var(--color-text-light); /* updated from var(--muted-foreground) */
+  font-size: var(--font-size-sm);
+}
+
+.actionButton {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  opacity: 0.9;
+}
+
+.cancelButton {
+  background-color: var(--color-muted);
+  color: var(--color-muted-foreground);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+  opacity: 0.9
+}

@@ -1,0 +1,273 @@
+/* ====================================================================
+   LEAVE MANAGEMENT PAGE - THEMED WITH GLOBAL HRMS VARIABLES
+   ==================================================================== */
+
+.leavesContainer {
+  padding: 1.5rem;
+  background-color: var(--color-background);
+  min-height: 100vh;
+  background-color: var(--color-secondary);
+}
+
+/* --- Header (Page Title + Add Button) --- */
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pageTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+.addButton:hover {
+  background-color: var(--color-primary-hover, #1d4ed8);
+}
+
+/* ====================================================================
+   OVERVIEW CARDS (Dashboard Section)
+   ==================================================================== */
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.overviewCard {
+  background-color: var(--color-surface, #fff);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.overviewCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.overviewCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.overviewCardTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.overviewCardValue {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.overviewCardInfo {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+/* Unique Card Icon Colors */
+.iconPending {
+  color: #f97316;
+}
+.iconApproved {
+  color: #10b981;
+}
+.iconRejected {
+  color: #ef4444;
+}
+.iconOnLeave {
+  color: #3b82f6;
+}
+.iconThisMonth {
+  color: #64748b;
+}
+
+/* ====================================================================
+   TABS SECTION (Requests & Balance)
+   ==================================================================== */
+
+.tabList {
+  position: sticky;
+  top: 0; /* adjust according to your navbar height */
+  z-index: 100;
+  background-color: #fff; /* keep background solid to cover content below */
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.tabTrigger {
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  background-color: transparent;
+  border-bottom: none;
+  border-top: none;
+  border-left: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb; /* subtle divider line */
+}
+
+.tabTriggerActive {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+}
+
+.tabContent {
+  margin-top: 1rem;
+  overflow-y: auto;
+}
+/* ====================================================================
+   DIALOG (Modal for Detailed View)
+   ==================================================================== */
+.cardInfoDialog {
+  max-width: 700px;
+  background-color: var(--color-surface, #fff);
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+}
+
+.dialogFilters {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.searchInput {
+  flex: 1;
+}
+
+.statusFilter {
+  width: 160px;
+}
+
+/* Scrollable area inside dialog */
+.dialogScroll {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+}
+.dialogScroll::-webkit-scrollbar {
+  width: 6px;
+}
+.dialogScroll::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+/* ====================================================================
+   TABLE (Inside Modal or Tabs)
+   ==================================================================== */
+.tableWrapper {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.tableHeader {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.tableRow:hover {
+  background-color: var(--color-secondary);
+  transition: background-color 0.2s ease;
+}
+
+/* ====================================================================
+   BADGES (Status & Leave Type Indicators)
+   ==================================================================== */
+.badge {
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: none;
+}
+
+/* Status Badges */
+.badgeApproved {
+  background-color: #d1fae5;
+  color: #059669;
+}
+.badgePending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+.badgeRejected {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* Type Badges */
+.badgeVacation {
+  background-color: #e0f2fe;
+  color: #3b82f6;
+}
+.badgeSick {
+  background-color: #fce7f3;
+  color: #ec4899;
+}
+.badgePersonal {
+  background-color: #ede9fe;
+  color: #8b5cf6;
+}
+.badgeMaternity {
+  background-color: #f3e8ff;
+  color: #a855f7;
+}
+
+/* ====================================================================
+   RESPONSIVE DESIGN
+   ==================================================================== */
+@media (max-width: 768px) {
+  .overviewGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dialogFilters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .statusFilter {
+    width: 100%;
+  }
+}
+.overviewCard {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.overviewCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,81 @@
+.badge {
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badgeGenerated {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.badgeProcessed {
+  background-color: #e0f2fe;
+  color: #3b82f6;
+}
+
+.badgeApproved {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.badgePaid {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badgeReversed {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.emptyState {
+  padding: 1.5rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.viewDialog {
+  max-width: 42rem;
+}
+
+.dialogGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.dialogActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.netSalaryValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.dialogNote {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.dialogLabel {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.dialogValue {
+  color: #1f2937;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

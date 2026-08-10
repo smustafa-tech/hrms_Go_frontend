@@ -1,0 +1,21 @@
+.card {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  border-radius: 8px;
+}
+.name {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+.rules {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 6px;
+}
+.btn {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+}

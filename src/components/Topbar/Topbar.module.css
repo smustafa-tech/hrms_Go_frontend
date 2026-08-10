@@ -1,0 +1,215 @@
+.topbar {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  padding: 0 1.5rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logoIcon {
+  height: 3.5rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoText {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.title {
+  flex: 1;
+}
+
+.titleText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.searchContainer {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 35%;
+  transform: translateY(-50%);
+  height: 1rem;
+  width: 1rem;
+  color: var(--color-foreground);
+}
+
+.searchInput {
+  width: 16rem;
+  padding: 0.5rem 0.75rem 0.5rem 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 0.875rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.1);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-light);
+}
+
+.notificationButton {
+  position: relative;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: all 0.15s ease;
+}
+
+.notificationButton:hover {
+  color: var(--color-text);
+  background-color: var(--color-background-light);
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  background-color: var(--color-primary-foreground);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userButton {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: all 0.15s ease;
+}
+
+.userButton:hover {
+  background-color: var(--color-background-light);
+}
+
+/* .dropdown {
+  background-color: var(--color-background-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  min-width: 12rem;
+  padding: 0.5rem 0;
+  z-index: 50;
+}
+
+.dropdownLabel {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.5rem;
+}
+
+.dropdownUserInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dropdownUserName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.dropdownUserEmail {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.dropdownItem:hover {
+  background-color: var(--color-background);
+}
+
+.dropdownSeparator {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 0.5rem 0;
+} */
+
+/* .notificationItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+} */
+
+/* .notificationItem:hover {
+  background-color: var(--secondary);
+}
+
+.notificationItem:last-child {
+  border-bottom: none;
+} */
+
+/* .notificationTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+} */
+
+/* .notificationDesc {
+  font-size: 0.75rem;
+  color: var(--text-light);
+} */

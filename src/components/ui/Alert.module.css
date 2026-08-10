@@ -1,0 +1,63 @@
+/* Alert container */
+.alert {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg); /* rounded-lg */
+  border: 1px solid transparent;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--color-background-light);
+  color: var(--color-text);
+}
+
+/* Variants */
+.default {
+  background-color: var(--color-background-light);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.destructive {
+  border-color: rgba(239, 68, 68, 0.5); /* red-500/50 */
+  background-color: var(--color-error-foreground);
+  color: var(--color-error);
+}
+
+/* Icon positioning */
+.alert svg {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: var(--color-primary); /* default icon color */
+}
+
+/* Ensure text is offset from icon */
+.alert > svg ~ * {
+  padding-left: 1.75rem; /* matches left offset + margin */
+}
+
+.alert > svg + div {
+  transform: translateY(-3px);
+}
+
+/* Title */
+.title {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+}
+
+/* Description */
+.description {
+  font-size: var(--font-size-sm); /* text-sm */
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+
+.description p {
+  line-height: 1.5;
+  margin: 0;
+}

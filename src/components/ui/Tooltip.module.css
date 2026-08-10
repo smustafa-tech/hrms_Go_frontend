@@ -1,0 +1,59 @@
+.tooltipContent {
+  z-index: 50;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  border: 1px solid #374151; /* project border */
+  background-color: #1f2937; /* project bg */
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  color: #f9fafb; /* project text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInZoom 0.2s ease-out forwards;
+}
+
+.tooltipArrow {
+  fill: #1f2937; /* same as tooltip background */
+}
+
+[data-state="closed"] {
+  animation: fadeOutZoom 0.2s ease-in forwards;
+}
+
+[data-side="bottom"] {
+  transform-origin: top center;
+}
+
+[data-side="top"] {
+  transform-origin: bottom center;
+}
+
+[data-side="left"] {
+  transform-origin: right center;
+}
+
+[data-side="right"] {
+  transform-origin: left center;
+}
+
+/* Animations */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}

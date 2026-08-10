@@ -1,0 +1,27 @@
+# Dependencies — Docker खुद install करेगा
+node_modules/
+
+# Local build output — Docker खुद build करेगा
+dist/
+
+# Git history
+.git
+.gitignore
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Editor files
+.vscode/
+.idea/
+*.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# README — documentation, image में ज़रूरत नहीं
+README.md
+DARK_THEME_IMPLEMENTATION.jsx

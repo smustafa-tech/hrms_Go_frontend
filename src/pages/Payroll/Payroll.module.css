@@ -1,0 +1,235 @@
+.payrollContainer {
+  padding: var(--spacing-lg);
+  background-color: var(--color-secondary);
+  min-height: 100vh;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.pageTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.addButton:hover {
+  background-color: var(--color-warning);
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.overviewCard {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.overviewCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.overviewCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.cardContent {
+  padding-top: var(--spacing-sm);
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.overviewCardTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.cardValue {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.overviewCardInfo {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+/* Unique Card Icon Colors for Payroll Status/Metrics */
+.iconTotalGross {
+  color: var(--color-accent);
+}
+.iconTotalNet {
+  color: var(--color-success);
+}
+.iconGenerated {
+  color: var(--color-warning);
+}
+.iconApproved {
+  color: var(--color-accent);
+}
+.iconPaid {
+  color: var(--color-success);
+}
+.iconStructures {
+  color: var(--color-muted-foreground);
+}
+
+.tabList {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-background);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+}
+
+.tabTrigger {
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  background-color: transparent;
+  border-bottom: none;
+  border-top: none;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+}
+
+.tabTriggerActive {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+}
+
+.tabContent {
+  margin-top: var(--spacing-md);
+  overflow-y: auto;
+}
+
+.badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 9999px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: capitalize;
+  border: none;
+}
+
+.badgeGenerated {
+  background-color: var(--color-warning-foreground);
+  color: var(--color-warning);
+}
+
+.badgeProcessed {
+  background-color: var(--color-accent-foreground);
+  color: var(--color-accent);
+}
+
+.badgeApproved {
+  background-color: var(--color-success-foreground);
+  color: var(--color-success);
+}
+
+.badgePaid {
+  background-color: var(--color-accent-foreground);
+  color: var(--color-accent);
+}
+
+.badgeReversed {
+  background-color: var(--color-error-foreground);
+  color: var(--color-error);
+}
+
+.refreshButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 50%;
+  color: var(--color-background);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+}
+
+.refreshButton:hover {
+  background: var(--color-warning);
+  transform: translateY(-2px);
+}
+
+.refreshButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .overviewGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .overviewGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

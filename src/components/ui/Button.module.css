@@ -1,0 +1,113 @@
+/* Base button styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+/* Variants */
+
+/* Default */
+.variant-default {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+.variant-default:hover {
+  background-color: var(--color-primary-dark);
+  opacity: 1; /* reset global opacity if needed */
+}
+
+/* Destructive */
+.variant-destructive {
+  background-color: var(--color-error);
+  color: var(--color-error-foreground);
+}
+
+/* Outline */
+.variant-outline {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Primary */
+.variant-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary-foreground);
+}
+
+.variant-primary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-foreground);
+  opacity: 1; /* reset global opacity if needed */
+  /* border: 2px solid var(--color-primary); */
+}
+
+/* Secondary */
+.variant-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+}
+
+/* Ghost */
+.variant-ghost {
+  background-color: transparent;
+  color: var(--color-text);
+}
+
+/* Link */
+.variant-link {
+  background-color: transparent;
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Sizes */
+.size-default {
+  height: 40px;
+  padding: 0 var(--spacing-md);
+}
+
+.size-sm {
+  height: 36px;
+  padding: 0 var(--spacing-sm);
+  font-size: var(--font-size-xs);
+}
+
+.size-lg {
+  height: 44px;
+  padding: 0 var(--spacing-lg);
+  font-size: var(--font-size-base);
+}
+
+.size-icon {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover & Active States */
+/* .button:hover {
+  opacity: 0.9;
+} */
+
+/* .button:active {
+  transform: scale(0.97);
+} */
+
+/* Disabled */
+.variant-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,15 @@
+.leaveCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.scrollArea {
+  max-height: 400px;
+}
+
+.noData {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+}

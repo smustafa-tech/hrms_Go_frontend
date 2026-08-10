@@ -1,0 +1,37 @@
+.card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card);
+  color: var(--color-card-foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+}
+
+.cardTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+.cardDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+}
+
+.cardContent {
+  padding: var(--spacing-lg);
+  padding-top: 0;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-lg);
+  padding-top: 0;
+}

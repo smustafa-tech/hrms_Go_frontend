@@ -1,0 +1,15 @@
+.container {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  /* gap: var(--spacing-2xl); */
+
+  padding: var(--spacing-xl);
+  background-color: var(--color-secondary);
+
+  color: var(--color-text); 
+}
+ 
+

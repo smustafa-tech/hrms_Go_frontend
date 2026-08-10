@@ -1,0 +1,127 @@
+/* Select Trigger (the box you click) */
+.selectTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 2.5rem; /* h-10 */
+  width: 100%;
+
+  border-radius: 0.375rem; /* rounded-md */
+  border: 1px solid var(--color-primary, #d1a700);
+
+  background-color: var(--color-background);
+
+  padding: 0.5rem 0.75rem; /* px-3 py-2 */
+
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
+  cursor: pointer;
+  color: #111;
+}
+
+/* When disabled */
+.selectTrigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.selectIcon {
+  height: 1rem; /* h-4 */
+  width: 1rem; /* w-4 */
+  opacity: 0.5;
+}
+
+.scrollButton {
+  display: flex;
+  cursor: default;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0; /* py-1 */
+}
+
+/* Select Content (the dropdown menu) */
+.selectContent {
+  position: relative;
+  z-index: 2000;
+  max-height: 24rem; /* max-h-96 */
+  /* min-width: 8rem; */
+  overflow: hidden;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-background);
+  /* color: var(--color-foreground); */
+  box-shadow: var(--shadow-md);
+  color: var(--color-muted-foreground);
+}
+
+.selectViewport {
+  width: 100%;
+  padding: 0.25rem; /* p-1 */
+}
+
+/* Individual dropdown items */
+.selectItem {
+  position: relative;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 0.25rem; /* rounded-sm */
+  padding: 0.375rem 0.5rem 0.375rem 2rem; /* py-1.5 pl-8 pr-2 */
+  font-size: 0.875rem; /* text-sm */
+  outline: none;
+}
+
+.selectItem[data-disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.selectItem:focus {
+  background-color: var(--color-primary);
+  color: var(--color-accent-foreground);
+}
+
+.selectItemIndicator {
+  position: absolute;
+  left: 0.5rem; /* left-2 */
+  display: flex;
+  height: 0.875rem; /* h-3.5 */
+  width: 0.875rem; /* w-3.5 */
+  align-items: center;
+  justify-content: center;
+}
+
+.selectLabel {
+  padding: 0.375rem 0.5rem 0.375rem 2rem; /* py-1.5 pl-8 pr-2 */
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.selectSeparator {
+  margin: 0.25rem 0; /* my-1 */
+  height: 1px;
+  background-color: var(--color-muted);
+}
+
+.valueWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0; /* important for ellipsis */
+}
+
+/* Select Value (the text inside trigger) */
+.selectValue {
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
+  flex: 1; /* takes available space inside trigger */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectValue::placeholder {
+  color: var(--color-muted-foreground); /* lighter color for placeholder */
+}
