@@ -53,20 +53,16 @@ RUN npm run build
 FROM nginx:alpine
 
 # हमारी custom nginx config copy करो
-# यह React Router की routing handle करती है
-# Default nginx config को replace करती है
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Stage 1 से सिर्फ dist/ folder copy करो
-# यही हमारी built React app है
-# Nginx इसी folder से files serve करेगा
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Port 80 expose करो
-# Nginx HTTP port 80 पर सुनता है
+# nginx.conf में PORT variable replace करने के लिए script
+# Railway $PORT देता है → nginx उसी पर listen करेगा
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
 EXPOSE 80
 
-# Nginx को foreground में चलाओ
-# daemon off = background में मत जाओ
-# Docker को process दिखनी चाहिए वरना container बंद हो जाता है
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["/docker-entrypoint.sh"]
