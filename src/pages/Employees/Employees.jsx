@@ -5,7 +5,7 @@ import EmployeeList from "@/features/Employees/EmployeeList";
 import EmployeeStats from "@/features/Employees/EmployeeStats";
 import EmployeeForm from "@/features/Employees/EmployeeForm";
 import EmployeeProfile from "@/features/Employees/EmployeeProfile";
-import { Dialog, DialogContent } from "@/components/ui/Dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/Dialog";
 import { useAuth } from "@/components/Context/AuthContext";
 import styles from "./Employees.module.css";
 import { toast } from "@/hooks/use-Toast";
@@ -100,7 +100,8 @@ export default function Employees() {
 
       {/* Add/Edit Employee Form */}
       <Dialog open={formModalOpen} onOpenChange={setFormModalOpen}>
-        <DialogContent className={styles.modalContent}>
+        <DialogContent className={styles.modalContent} aria-describedby={undefined}>
+          <DialogTitle className="sr-only">{editEmployee ? "Edit Employee" : "Add Employee"}</DialogTitle>
           <EmployeeForm
             initialData={editEmployee}
             onClose={() => setFormModalOpen(false)}
@@ -110,7 +111,8 @@ export default function Employees() {
 
       {/* View Employee Profile */}
       <Dialog open={profileModalOpen} onOpenChange={setProfileModalOpen}>
-        <DialogContent className={styles.modalContent}>
+        <DialogContent className={styles.modalContent} aria-describedby={undefined}>
+          <DialogTitle className="sr-only">Employee Profile</DialogTitle>
           <EmployeeProfile
             employee={viewEmployee}
             onClose={() => setProfileModalOpen(false)}
