@@ -103,9 +103,17 @@ export function AuthProvider({ children }) {
   // AuthContext.js
   const updateEmployee = async (emp_id, updatedData) => {
     try {
+      const payload = {
+        ...updatedData,
+        salary:
+          updatedData.salary === "" || updatedData.salary == null
+            ? null
+            : Number(updatedData.salary),
+      };
+
       const res = await api.put(
         `employee/update-employee-data/${emp_id}`,
-        updatedData
+        payload
       );
       console.log("[DEBUG] Update employee response:", res.data); // Log response
       return res.data; // return updated employee
@@ -135,9 +143,10 @@ export function AuthProvider({ children }) {
     mgrId,
     hrId,
     workMode,
+    temporaryPassword,
   }) => {
     try {
-      const res = await api.post("/add-employee/register", {
+      const payload = {
         firstName,
         middleName,
         lastName,
@@ -149,12 +158,15 @@ export function AuthProvider({ children }) {
         department,
         dateOfJoining,
         status,
-        salary,
+        salary: salary === "" || salary == null ? null : Number(salary),
         workMode,
         emp_id,
         hrId,
         mgrId,
-      });
+        temporaryPassword,
+      };
+
+      const res = await api.post("/add-employee/register", payload);
 
       console.log("API response:", res.data);
 

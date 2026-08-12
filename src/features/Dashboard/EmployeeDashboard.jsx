@@ -276,6 +276,30 @@ export default function EmployeeDashboard() {
 
   return (
     <div className={styles.dashboard}>
+      <div
+        style={{
+          marginBottom: "1rem",
+          padding: "0.75rem 1rem",
+          borderRadius: "10px",
+          border: "1px solid #fbbf24",
+          background: "#fff7ed",
+          color: "#9a5b00",
+          fontSize: "0.92rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "0.75rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <span>
+          For better privacy and security, you can change your password anytime from Settings.
+        </span>
+        <Link to="/settings" style={{ color: "#9a5b00", fontWeight: 600 }}>
+          Go to Settings
+        </Link>
+      </div>
+
       {/* Header */}
       <div className={styles.header}>
         <div className={styles.headerContent}>

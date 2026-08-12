@@ -59,4 +59,7 @@ RUN chmod +x /docker-entrypoint.sh
 
 EXPOSE 8080
 
+HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
+    CMD wget -qO- --spider http://localhost:8080/ || exit 1
+
 CMD ["/docker-entrypoint.sh"]
