@@ -11,6 +11,12 @@
 # Alpine = छोटा Linux (~5MB)
 FROM node:20-alpine AS builder
 
+# Vite substitutes VITE_* values when the static bundle is built. Railway
+# passes build variables to Docker as ARG values, so make the public API URL
+# available before `npm run build` executes.
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
 # Working directory set करो
 WORKDIR /app
 
