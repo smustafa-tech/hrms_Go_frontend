@@ -43,7 +43,6 @@ const EmployeeForm = ({ initialData, onClose }) => {
     emp_id: initialData?.emp_id || "",
     mgrId: initialData?.mgrId || "",
     hrId: initialData?.hrId || "",
-    temporaryPassword: "",
   });
 
   useEffect(() => {
@@ -65,7 +64,6 @@ const EmployeeForm = ({ initialData, onClose }) => {
         emp_id: initialData.emp_id || "",
         mgrId: initialData.mgrId || "",
         hrId: initialData.hrId || "",
-        temporaryPassword: "",
       });
     }
   }, [initialData]);
@@ -141,15 +139,12 @@ const EmployeeForm = ({ initialData, onClose }) => {
       } else {
         result = await employeeRegister(form);
         const createdEmployee = result?.data || result;
-        const temporaryPassword = result?.temporaryPassword;
 
         addEmployee(createdEmployee);
 
         toast({
           title: "Success",
-          description: temporaryPassword
-            ? `Employee ID: ${createdEmployee?.emp_id || form.emp_id}. Temporary password: ${temporaryPassword}`
-            : `Employee ID: ${createdEmployee?.emp_id || form.emp_id}. Employee created successfully`,
+          description: `Employee ID: ${createdEmployee?.emp_id || form.emp_id}. Employee created successfully`,
           variant: "success",
         });
       }
@@ -193,11 +188,6 @@ const EmployeeForm = ({ initialData, onClose }) => {
         <div className={styles.field}>
           <Label>Email <RequiredStar /></Label>
           <Input type="email" name="email" value={form.email} placeholder="Email" onChange={handleChange} required />
-        </div>
-
-        <div className={styles.field}>
-          <Label>Temporary Password <RequiredStar /></Label>
-          <Input type="password" name="temporaryPassword" value={form.temporaryPassword} placeholder="Enter temporary password" onChange={handleChange} required />
         </div>
 
         <div className={styles.field}>

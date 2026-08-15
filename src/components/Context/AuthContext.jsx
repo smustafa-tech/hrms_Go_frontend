@@ -143,7 +143,6 @@ export function AuthProvider({ children }) {
     mgrId,
     hrId,
     workMode,
-    temporaryPassword,
   }) => {
     try {
       const payload = {
@@ -163,7 +162,6 @@ export function AuthProvider({ children }) {
         emp_id,
         hrId,
         mgrId,
-        temporaryPassword,
       };
 
       const res = await api.post("/add-employee/register", payload);
