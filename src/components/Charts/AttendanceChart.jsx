@@ -43,7 +43,7 @@ const AttendanceLineChart = (attendanceData = {}) => {
   // Helper function to find attendance count for a given date
   const getPresentCountForDate = (date) => {
     const day = Object.entries(allAttendanceData).map(
-      (item) => item[1].dailyData.filter((item) => item.date === date)[0]
+      (entry) => entry[1]?.dailyData?.filter((record) => record.date === date)[0]
     );
     return day ? day.filter((item) => item?.status === "Present").length : 0;
   };

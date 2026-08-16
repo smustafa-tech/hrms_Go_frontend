@@ -139,14 +139,34 @@ const EmployeeForm = ({ initialData, onClose }) => {
       } else {
         result = await employeeRegister(form);
         const createdEmployee = result?.data || result;
+        const temporaryPassword = result?.temporaryPassword;
 
         addEmployee(createdEmployee);
 
-        toast({
-          title: "Success",
-          description: `Employee ID: ${createdEmployee?.emp_id || form.emp_id}. Employee created successfully`,
-          variant: "success",
-        });
+        if (temporaryPassword) {
+          toast({
+            title: "Employee created successfully",
+            description: (
+              <div>
+                <p>Employee ID: {createdEmployee?.emp_id || form.emp_id}</p>
+                <p>
+                  <strong>Temporary Password:</strong> {temporaryPassword}
+                </p>
+                <p style={{ fontSize: "12px", marginTop: "4px" }}>
+                  Share this password with the employee for first login.
+                </p>
+              </div>
+            ),
+            variant: "success",
+            duration: 10000,
+          });
+        } else {
+          toast({
+            title: "Success",
+            description: `Employee ID: ${createdEmployee?.emp_id || form.emp_id}. Employee created successfully`,
+            variant: "success",
+          });
+        }
       }
 
       onClose();
